@@ -1,0 +1,54 @@
+/* Cartoonish design system */
+
+:root {
+  --primary-hue: 30; /* warm orange */
+  --primary-saturation: 80%;
+  --primary-lightness: 55%;
+  --bg-hue: 210;
+  --bg-saturation: 30%;
+  --bg-lightness: 95%;
+  --accent-hue: 120; /* playful green */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Neue', cursive;
+  background: hsl(var(--bg-hue), var(--bg-saturation), var(--bg-lightness));
+  color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+}
+
+a {
+  color: hsl(var(--accent-hue), 70%, 45%);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(var(--accent-hue), 80%, 55%);
+}
+
+/* Micro‑animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.button {
+  background: linear-gradient(45deg, hsl(var(--primary-hue), var(--primary-saturation), 70%), hsl(var(--primary-hue), var(--primary-saturation), 50%));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
