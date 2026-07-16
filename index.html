@@ -1,113 +1,770 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample-Portfolio</title>
-    <!-- Load Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-    <script>
-      tailwind.config = {
-          darkMode: "class",
-          theme: {
-              extend: {
-                  "colors": {
-                      "on-primary-fixed-variant": "#474746",
-                      "canvas": "#F8F8F8",
-                      "surface-bright": "#f9f9f9",
-                      "surface-container": "#eeeeee",
-                      "surface-container-high": "#e8e8e8",
-                      "on-tertiary": "#ffffff",
-                      "on-secondary-container": "#6a2100",
-                      "surface-variant": "#e2e2e2",
-                      "background": "#f9f9f9",
-                      "on-background": "#1a1c1c",
-                      "on-primary-container": "#8a8989",
-                      "on-surface": "#1a1c1c",
-                      "primary": "#0b0c0c",
-                      "primary-container": "#222222",
-                      "surface-dim": "#dadada",
-                      "on-secondary-fixed-variant": "#802a00",
-                      "outline-variant": "#c4c7c7",
-                      "secondary-container": "#ff7e4a",
-                      "inverse-surface": "#2f3131",
-                      "primary-fixed-dim": "#c8c6c5",
-                      "outline": "#747878",
-                      "surface-tint": "#5f5e5e",
-                      "inverse-primary": "#c8c6c5",
-                      "inverse-on-surface": "#f1f1f1",
-                      "tertiary": "#0c0c0b",
-                      "surface-container-low": "#f3f3f3",
-                      "surface": "#f9f9f9",
-                      "signal": "#EE713E",
-                      "on-tertiary-container": "#8c8987",
-                      "ink": "#222222",
-                      "tertiary-fixed": "#e6e2e0",
-                      "on-surface-variant": "#444748",
-                      "secondary-fixed": "#ffdbce",
-                      "tertiary-container": "#232221",
-                      "on-error": "#ffffff",
-                      "secondary-fixed-dim": "#ffb59a",
-                      "surface-container-highest": "#e2e2e2",
-                      "error-container": "#ffdad6",
-                      "primary-fixed": "#e5e2e1",
-                      "on-primary-fixed": "#1b1c1c",
-                      "on-tertiary-fixed": "#1c1b1a",
-                      "secondary": "#a53c09",
-                      "error": "#ba1a1a",
-                      "accent-warm": "#FCBF8D",
-                      "on-secondary": "#ffffff",
-                      "on-primary": "#ffffff",
-                      "on-error-container": "#93000a",
-                      "surface-container-lowest": "#ffffff",
-                      "tertiary-fixed-dim": "#c9c6c4",
-                      "on-tertiary-fixed-variant": "#484645",
-                      "on-secondary-fixed": "#380d00"
-                  },
-                  "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-                  },
-                  "spacing": {
-                      "gutter": "1rem",
-                      "margin-page": "4rem",
-                      "unit": "8px",
-                      "section-gap": "12rem",
-                      "margin-mobile": "1.5rem"
-                  },
-                  "fontFamily": {
-                      "meta-sm": ["Inter"],
-                      "headline-lg-mobile": ["EB Garamond"],
-                      "display-lg": ["EB Garamond"],
-                      "body-md": ["Inter"],
-                      "display-lg-mobile": ["EB Garamond"],
-                      "label-caps": ["JetBrains Mono"],
-                      "headline-md": ["EB Garamond"],
-                      "headline-lg": ["EB Garamond"],
-                      "body-lg": ["Inter"]
-                  },
-                  "fontSize": {
-                      "meta-sm": ["12px", {"lineHeight": "140%", "fontWeight": "400"}],
-                      "headline-lg-mobile": ["40px", {"lineHeight": "120%", "fontWeight": "400"}],
-                      "display-lg": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "400"}],
-                      "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
-                      "display-lg-mobile": ["64px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                      "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
-                      "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "400"}],
-                      "headline-lg": ["64px", {"lineHeight": "120%", "fontWeight": "400"}],
-                      "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}]
-                  }
-              }
-          }
-      };
-    </script>
-  </head>
-  <body class="antialiased overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IMMERSIVE MOTION - Cartoon Scrollytelling</title>
+<meta name="description" content="A scrollytelling experiment showcasing immersive motion design, cartoon-style interactions, and comic-inspired portfolio architecture." />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-container": "#f34100",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-container-low": "#f3f3f3",
+                    "primary": "#000000",
+                    "on-tertiary-fixed": "#3b0900",
+                    "background": "#f9f9f9",
+                    "on-secondary-container": "#6e5c00",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e2e2e2",
+                    "error": "#ba1a1a",
+                    "tertiary": "#000000",
+                    "primary-fixed": "#e5e2e1",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#ffc107",
+                    "error-container": "#ff9800",
+                    "tertiary-fixed-dim": "#ffb5a0",
+                    "on-secondary-fixed": "#221b00",
+                    "outline": "#747878",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#544600",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "on-primary-container": "#858383",
+                    "secondary": "#705d00",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-tertiary-fixed-variant": "#872000",
+                    "primary-container": "#1c1b1b",
+                    "tertiary-fixed": "#03a9f4",
+                    "surface": "#f9f9f9",
+                    "on-surface-variant": "#444748",
+                    "surface-tint": "#5f5e5e",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-surface": "#2f3131",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffe16d",
+                    "surface-container": "#eeeeee",
+                    "outline-variant": "#c4c7c7",
+                    "tertiary-container": "#3b0900"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "stack-xs": "0.5rem",
+                    "stack-lg": "3rem",
+                    "stack-md": "1.5rem",
+                    "gutter": "1.5rem",
+                    "panel-margin": "2rem"
+                },
+                "fontFamily": {
+                    "headline-lg-mobile": ["Anybody"],
+                    "headline-lg": ["Anybody"],
+                    "headline-xl": ["Anybody"],
+                    "body-md": ["Bricolage Grotesque"],
+                    "body-lg": ["Bricolage Grotesque"],
+                    "caption": ["Bricolage Grotesque"],
+                    "label-bold": ["Space Mono"]
+                },
+                "fontSize": {
+                    "headline-lg-mobile": ["36px", { "lineHeight": "40px", "fontWeight": "800" }],
+                    "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                    "headline-xl": ["80px", { "lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "400" }],
+                    "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                    "label-bold": ["14px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    /* Halftone Pattern */
+    .halftone-bg {
+        background-image: radial-gradient(#1c1b1b 15%, transparent 16%), radial-gradient(#1c1b1b 15%, transparent 16%);
+        background-size: 8px 8px;
+        background-position: 0 0, 4px 4px;
+        background-color: #ffc107;
+    }
+    
+    .halftone-bg-light {
+        background-image: radial-gradient(rgba(28, 27, 27, 0.1) 15%, transparent 16%), radial-gradient(rgba(28, 27, 27, 0.1) 15%, transparent 16%);
+        background-size: 8px 8px;
+        background-position: 0 0, 4px 4px;
+        background-color: #f9f9f9;
+    }
+
+    /* Comic Borders & Shadows */
+    .comic-border {
+        border: 5px solid #000000;
+        border-radius: 2px;
+    }
+    
+    .comic-shadow {
+        box-shadow: 10px 10px 0px 0px #000000;
+    }
+
+    .comic-shadow-sm {
+        box-shadow: 6px 6px 0px 0px #000000;
+    }
+    
+    .comic-panel {
+        background-color: #ffffff;
+        border: 6px solid #000000;
+        box-shadow: 12px 12px 0px 0px #000000;
+        border-radius: 4px;
+        clip-path: polygon(1% 0%, 99% 2%, 100% 98%, 0% 100%);
+    }
+
+    /* Glassmorphism panel for video sections */
+    .glass-panel {
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animations */
+    @keyframes irisIn {
+        0% { clip-path: circle(0% at 50% 50%); }
+        100% { clip-path: circle(150% at 50% 50%); }
+    }
+    .iris-reveal {
+        animation: irisIn 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+
+    @keyframes popIn {
+        0% { transform: scale(0.8) translateY(20px) rotate(-5deg); opacity: 0; }
+        60% { transform: scale(1.1) translateY(-5px) rotate(3deg); opacity: 1; }
+        100% { transform: scale(1) translateY(0) rotate(0deg); opacity: 1; }
+    }
+    
+    .animate-pop-in {
+        opacity: 0;
+        animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes squashStretch {
+        0%, 100% { transform: scale(1, 1); }
+        50% { transform: scale(1.05, 0.95); }
+    }
+    .animate-squash {
+        animation: squashStretch 2s infinite ease-in-out;
+    }
+
+    @keyframes floatBounce {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(2deg); }
+    }
+    .animate-float {
+        animation: floatBounce 3s infinite ease-in-out;
+    }
+
+    @keyframes whackAMole {
+        0% { transform: translateY(100%); }
+        10% { transform: translateY(0%); }
+        90% { transform: translateY(0%); }
+        100% { transform: translateY(100%); }
+    }
+    .whack-a-mole-anim {
+        animation: whackAMole 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    @keyframes waveAnim {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(10deg); }
+        75% { transform: rotate(-5deg); }
+    }
+    .animate-wave {
+        animation: waveAnim 1.5s infinite ease-in-out;
+        transform-origin: bottom center;
+    }
+
+    @keyframes smokeUp {
+        0% { transform: translateY(0) scale(1); opacity: 0.8; }
+        100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+    }
+    .animate-smoke {
+        animation: smokeUp 2s infinite linear;
+    }
+
+    /* Sprite Animation */
+    @keyframes playSprite {
+        100% { background-position: -400%; }
+    }
+
+    /* Speech Bubbles */
+    .speech-bubble {
+        position: relative;
+        background: #ffffff;
+        border: 5px solid #000000;
+        border-radius: 30px;
+        padding: 1rem 1.5rem;
+        box-shadow: 6px 6px 0px 0px #000000;
+    }
+    .speech-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 25px;
+        border-width: 20px 20px 0;
+        border-style: solid;
+        border-color: #ffffff transparent transparent transparent;
+        display: block;
+        width: 0;
+    }
+    .speech-bubble::before {
+        content: '';
+        position: absolute;
+        bottom: -27px;
+        left: 21px;
+        border-width: 25px 25px 0;
+        border-style: solid;
+        border-color: #000000 transparent transparent transparent;
+        display: block;
+        width: 0;
+        z-index: -1;
+    }
+
+    .pow-bubble {
+        background: #ffc107;
+        border-radius: 50%;
+        border: 6px solid #000000;
+        box-shadow: 8px 8px 0 0 #000000;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    /* Parallax utility class to handle hardware acceleration */
+    .parallax-layer {
+        will-change: transform;
+    }
+    
+    /* Custom scrollbar for a comic feel */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f9f9f9;
+        border-left: 2px solid #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #1c1b1b;
+        border: 2px solid #000000;
+    }
+
+    /* Horizontal Scroll Specifics */
+    .horizontal-scroll-container {
+        width: 200vw;
+        display: flex;
+        height: 100vh;
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+
+<!-- Top Navigation -->
+<nav id="main-nav" class="fixed top-0 z-50 flex justify-between items-center w-full px-gutter py-4 bg-surface border-b-6 border-primary shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+    <div class="font-headline-lg-mobile text-headline-lg-mobile font-black uppercase italic tracking-tighter text-primary transform -rotate-1">
+        Arjun's Special
+    </div>
+    <div class="hidden md:flex gap-6">
+        <a id="nav-storyboard" class="text-error-container underline decoration-4 underline-offset-8 font-label-bold text-label-bold hover:-translate-y-1 hover:translate-x-1 transition-transform active:translate-y-2 active:translate-x-2 duration-75" href="#hero-section">STORYBOARD</a>
+        <a id="nav-cast" class="text-on-surface font-label-bold text-label-bold hover:-translate-y-1 hover:translate-x-1 transition-transform active:translate-y-2 active:translate-x-2 duration-75" href="#protagonist-section">CAST</a>
+        <a id="nav-archive" class="text-on-surface font-label-bold text-label-bold hover:-translate-y-1 hover:translate-x-1 transition-transform active:translate-y-2 active:translate-x-2 duration-75" href="#archive-section">ARCHIVE</a>
+        <a id="nav-sessions" class="text-on-surface font-label-bold text-label-bold hover:-translate-y-1 hover:translate-x-1 transition-transform active:translate-y-2 active:translate-x-2 duration-75" href="#footer-section">SESSIONS</a>
+    </div>
+    <button id="hire-me-btn" class="bg-tertiary-fixed text-primary px-6 py-2 comic-border comic-shadow-sm font-label-bold hover:-translate-y-1 hover:translate-x-1 transition-transform active:translate-y-2 active:translate-x-2 duration-75 transform rotate-2">
+        HIRE ME
+    </button>
+</nav>
+
+<!-- 1. Hero Section -->
+<section id="hero-section" class="relative h-screen w-full flex items-center justify-center overflow-hidden iris-reveal border-b-8 border-primary">
+    <!-- Background Image -->
+    <img src="/videos/cartoon-bg.png" alt="Cartoon background" class="absolute inset-0 w-full h-full object-cover z-0" />
+    <!-- Background splats -->
+    <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-tertiary-fixed rounded-full mix-blend-multiply blur-sm z-[1]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-48 h-48 bg-error-container rounded-full mix-blend-multiply blur-sm z-[1]"></div>
+    <div class="relative z-10 text-center flex flex-col items-center">
+        <h1 class="font-headline-xl text-headline-xl md:text-[140px] md:leading-[120px] text-on-primary drop-shadow-[12px_12px_0_#ff9800] transform -rotate-3 animate-squash">
+            MY<br/>PORTFOLIO
+        </h1>
+        <p class="font-label-bold text-label-bold text-secondary-container bg-primary px-6 py-3 mt-6 comic-border rotate-3 text-lg">
+            A SCROLLYTELLING EXPERIMENT
+        </p>
+    </div>
+</section>
+
+<!-- 2. The Protagonist -->
+<section id="protagonist-section" class="relative h-screen w-full px-gutter py-stack-lg overflow-hidden flex items-center border-b-8 border-primary">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="/videos/popeye.mp4" type="video/mp4"/>
+    </video>
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-black/40 z-[1]"></div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full max-w-7xl mx-auto relative z-10">
+        <div class="md:col-span-6 md:col-start-2 z-10 scroll-trigger animate-pop-in" style="opacity: 0;">
+            <div class="p-10 transform -rotate-2 relative">
+                <h2 class="font-headline-lg text-headline-lg text-white mb-4 uppercase drop-shadow-[4px_4px_0_#ffc107]">
+                    INTRODUCTION
+                </h2>
+                <p class="font-body-lg text-body-lg text-white/80 mb-6 font-bold">
+                    Hi my name is Arjun Dinesh Menon. I am a passionate student pursuing AI and Data Science. I like to make beautiful websites
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Scroll-Linked Video (Frame Sequence + Canvas) -->
+<section id="scroll-video-section" class="relative w-full border-b-8 border-primary h-[1000vh] bg-black">
+    <div class="sticky top-0 h-screen w-full overflow-hidden">
+        <canvas id="scroll-video-canvas" class="absolute inset-0 w-full h-full"></canvas>
+        <!-- Text overlay that fades in at end of video -->
+        <div id="scroll-video-text" class="absolute inset-0 z-10 flex items-center px-gutter pointer-events-none" style="opacity: 0;">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full max-w-7xl mx-auto">
+                <div class="md:col-span-6 md:col-start-2 pointer-events-auto">
+                    <div class="p-10 transform -rotate-2 relative">
+                        <h2 class="font-headline-lg text-headline-lg text-white mb-4 uppercase drop-shadow-[4px_4px_0_#ffc107]">
+                            ABOUT ME
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-white/80 font-bold">
+                            I was born in Kerala, India on 18th of September 2006. I moved to Bahrain at a very young age and then moved to Coorg, Karnataka when i was 7 years old. I completed my 12th in Kerala and I am currently studying in KGISL Institute of Technology
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loading overlay -->
+        <div id="scroll-video-loader" class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black transition-opacity duration-500">
+            <div class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-container uppercase tracking-wider mb-6 animate-squash">Loading Frames</div>
+            <div class="w-64 h-2 bg-surface-container-high rounded-full overflow-hidden comic-border">
+                <div id="scroll-video-progress" class="h-full bg-tertiary-fixed transition-all duration-100 ease-out" style="width: 0%"></div>
+            </div>
+            <div id="scroll-video-percent" class="font-label-bold text-label-bold text-on-surface mt-3">0%</div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Scroll-Linked Video (240 Frame Sequence + Canvas) -->
+<section id="moving-video-section" class="relative w-full border-b-8 border-primary h-[800vh] bg-black">
+    <div class="sticky top-0 h-screen w-full overflow-hidden">
+        <canvas id="moving-video-canvas" class="absolute inset-0 w-full h-full"></canvas>
+        <!-- Halftone overlay to blend with the comic style of the rest of the site -->
+        <div class="absolute inset-0 halftone-bg-light opacity-20 z-[20] pointer-events-none mix-blend-overlay"></div>
+        <!-- Text overlay that fades in at end of video -->
+        <div id="moving-video-text" class="absolute inset-0 z-10 flex items-center px-gutter pointer-events-none" style="opacity: 0;">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full max-w-7xl mx-auto">
+                <div class="md:col-span-6 md:col-start-2 pointer-events-auto">
+                    <div class="p-10 transform -rotate-2 relative">
+                        <h2 class="font-headline-lg text-headline-lg text-white mb-4 uppercase drop-shadow-[4px_4px_0_#ffc107]">
+                            MY HOBBIES
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-white/80 font-bold">
+                            I like listening to music, watching movies, making beautiful websites, playing games, working out etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loading overlay -->
+        <div id="moving-video-loader" class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black transition-opacity duration-500">
+            <div class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-container uppercase tracking-wider mb-6 animate-squash">Loading Video</div>
+            <div class="w-64 h-2 bg-surface-container-high rounded-full overflow-hidden comic-border">
+                <div id="moving-video-progress" class="h-full bg-tertiary-fixed transition-all duration-100 ease-out" style="width: 0%"></div>
+            </div>
+            <div id="moving-video-percent" class="font-label-bold text-label-bold text-on-surface mt-3">0%</div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Immersive Break -->
+<section class="relative h-[80vh] w-full bg-error-container overflow-hidden border-b-8 border-primary flex items-center justify-center">
+    <div class="absolute inset-0 halftone-bg opacity-40"></div>
+    <div class="z-30 comic-panel p-8 transform -rotate-4 bg-secondary-container mt-40">
+        <h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-primary font-black drop-shadow-[3px_3px_0_#ffffff]">Foreground vs Background</h2>
+    </div>
+</section>
+
+<!-- 6. The Archive -->
+<section id="archive-section" class="relative min-h-screen w-full px-gutter py-stack-lg bg-surface-container-lowest border-b-8 border-primary">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline-xl text-headline-xl text-primary mb-12 uppercase text-center scroll-trigger drop-shadow-[6px_6px_0_#ff9800] animate-pop-in" style="opacity: 0;">
+            Selected Works
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Project 1 -->
+            <div id="project-1" class="comic-panel group cursor-pointer overflow-hidden scroll-trigger transform -rotate-1 hover:rotate-0 transition-transform animate-pop-in" style="opacity: 0;">
+                <div class="h-64 border-b-6 border-primary bg-secondary-fixed flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 halftone-bg opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="font-headline-lg text-headline-lg z-10 group-hover:scale-125 transition-transform font-black drop-shadow-[4px_4px_0_#ffffff]">01</span>
+                </div>
+                <div class="p-8 bg-surface">
+                    <h3 class="font-label-bold text-label-bold text-primary mb-3 uppercase text-xl">The Big Chase</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant font-bold">Interactive brand experience utilizing WebGL shaders and pure chaotic energy.</p>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div id="project-2" class="comic-panel group cursor-pointer overflow-hidden scroll-trigger transform translate-y-8 rotate-1 hover:rotate-0 transition-transform animate-pop-in" style="opacity: 0;">
+                <div class="h-64 border-b-6 border-primary bg-tertiary-fixed flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 halftone-bg opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="font-headline-lg text-headline-lg z-10 group-hover:scale-125 transition-transform font-black drop-shadow-[4px_4px_0_#ffffff]">02</span>
+                </div>
+                <div class="p-8 bg-surface">
+                    <h3 class="font-label-bold text-label-bold text-primary mb-3 uppercase text-xl">Squash &amp; Stretch</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant font-bold">E-commerce platform redesign focusing on micro-interactions and tactile feedback.</p>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div id="project-3" class="comic-panel group cursor-pointer overflow-hidden scroll-trigger transform -rotate-2 hover:rotate-0 transition-transform animate-pop-in" style="opacity: 0;">
+                <div class="h-64 border-b-6 border-primary bg-error-container flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 halftone-bg opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="font-headline-lg text-headline-lg z-10 group-hover:scale-125 transition-transform font-black drop-shadow-[4px_4px_0_#ffffff]">03</span>
+                </div>
+                <div class="p-8 bg-surface">
+                    <h3 class="font-label-bold text-label-bold text-primary mb-3 uppercase text-xl">Ink Splat</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant font-bold">Digital editorial utilizing heavy brutalist typography and CSS parallax layers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Footer -->
+<footer id="footer-section" class="relative flex flex-col items-center justify-center gap-stack-md py-[150px] px-panel-margin w-full border-t-8 border-primary overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="/videos/intro.mp4" type="video/mp4"/>
+    </video>
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+    <div class="z-10 flex flex-col items-center relative">
+        <h2 class="font-headline-xl text-headline-xl text-center font-black text-primary mb-10 drop-shadow-[8px_8px_0_#ffffff] transform -rotate-2">
+            COMMENCE DIALOGUE
+        </h2>
+        <button id="contact-btn" class="bg-error-container text-primary px-10 py-5 comic-border comic-shadow font-headline-lg-mobile text-headline-lg-mobile uppercase hover:-translate-y-2 hover:translate-x-2 transition-transform mb-14 transform rotate-1">
+            Drop a Line
+        </button>
+        <div class="flex gap-8 font-label-bold text-label-bold text-secondary-container bg-primary px-10 py-5 comic-border transform -rotate-1">
+            <a id="footer-episodes" class="hover:text-tertiary-fixed transition-colors" href="#">EPISODES</a>
+            <a id="footer-credits" class="hover:text-tertiary-fixed transition-colors" href="#">CREDITS</a>
+            <a id="footer-fanmail" class="hover:text-tertiary-fixed transition-colors" href="#">FAN MAIL</a>
+            <a id="footer-legal" class="hover:text-tertiary-fixed transition-colors" href="#">LEGAL</a>
+        </div>
+        <p class="mt-10 font-label-bold text-primary bg-surface px-6 py-3 comic-border transform rotate-2">
+            THAT'S ALL FOLKS! © 2024 STUDIO ARCHIVE
+        </p>
+    </div>
+</footer>
+
+<script>
+    // Intersection Observer for scroll triggers
+    document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-pop-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-trigger').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+
+        // Vanilla JS Parallax Implementation
+        const parallaxElements = document.querySelectorAll('.parallax-layer');
+        
+
+
+
+        // ========================================
+        // SCROLL-LINKED VIDEO (Frame Sequence + Canvas)
+        // ========================================
+        const TOTAL_FRAMES = 240;
+        const scrollVideoSection = document.getElementById('scroll-video-section');
+        const scrollVideoCanvas = document.getElementById('scroll-video-canvas');
+        const scrollVideoCtx = scrollVideoCanvas ? scrollVideoCanvas.getContext('2d') : null;
+        const scrollVideoLoader = document.getElementById('scroll-video-loader');
+        const scrollVideoProgress = document.getElementById('scroll-video-progress');
+        const scrollVideoPercent = document.getElementById('scroll-video-percent');
+        const frames = [];
+        let framesLoaded = 0;
+        let allFramesReady = false;
+        let currentDisplayFrame = 0; // the actual frame being drawn (float for lerping)
+        let targetFrame = 0;         // the frame we want based on scroll
+
+        // Size the canvas to match the viewport at native resolution
+        function sizeScrollCanvas() {
+            if (!scrollVideoCanvas) return;
+            scrollVideoCanvas.width = window.innerWidth;
+            scrollVideoCanvas.height = window.innerHeight;
+            // Redraw current frame at new size
+            if (allFramesReady && frames[Math.round(currentDisplayFrame)]) {
+                drawFrame(Math.round(currentDisplayFrame));
+            }
+        }
+        sizeScrollCanvas();
+        window.addEventListener('resize', sizeScrollCanvas);
+
+        // Draw a frame on the canvas, covering the viewport (like object-fit: cover)
+        function drawFrame(index) {
+            const img = frames[index];
+            if (!img || !scrollVideoCtx) return;
+
+            const canvasW = scrollVideoCanvas.width;
+            const canvasH = scrollVideoCanvas.height;
+            const imgW = img.naturalWidth;
+            const imgH = img.naturalHeight;
+
+            // Cover calculation
+            const scale = Math.max(canvasW / imgW, canvasH / imgH);
+            const drawW = imgW * scale;
+            const drawH = imgH * scale;
+            const drawX = (canvasW - drawW) / 2;
+            const drawY = (canvasH - drawH) / 2;
+
+            scrollVideoCtx.clearRect(0, 0, canvasW, canvasH);
+            scrollVideoCtx.drawImage(img, drawX, drawY, drawW, drawH);
+        }
+
+        // Preload all frames
+        function preloadFrames() {
+            for (let i = 1; i <= TOTAL_FRAMES; i++) {
+                const img = new Image();
+                img.src = `/frames/frame_${String(i).padStart(4, '0')}.jpg`;
+                img.onload = () => {
+                    framesLoaded++;
+                    const pct = Math.round((framesLoaded / TOTAL_FRAMES) * 100);
+                    if (scrollVideoProgress) scrollVideoProgress.style.width = pct + '%';
+                    if (scrollVideoPercent) scrollVideoPercent.textContent = pct + '%';
+
+                    if (framesLoaded === TOTAL_FRAMES) {
+                        allFramesReady = true;
+                        // Fade out loader
+                        if (scrollVideoLoader) {
+                            scrollVideoLoader.style.opacity = '0';
+                            setTimeout(() => { scrollVideoLoader.style.display = 'none'; }, 500);
+                        }
+                        // Draw first frame
+                        drawFrame(0);
+                    }
+                };
+                frames[i - 1] = img; // store in 0-indexed array
+            }
+        }
+        preloadFrames();
+
+        // Smooth rendering loop using lerp for buttery interpolation
+        function scrollVideoRenderLoop() {
+            if (allFramesReady) {
+                // Lerp towards the target frame for smoothness
+                currentDisplayFrame += (targetFrame - currentDisplayFrame) * 0.15;
+
+                // Snap when very close to avoid endless tiny updates
+                if (Math.abs(currentDisplayFrame - targetFrame) < 0.1) {
+                    currentDisplayFrame = targetFrame;
+                }
+
+                const frameIndex = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.round(currentDisplayFrame)));
+                drawFrame(frameIndex);
+            }
+            requestAnimationFrame(scrollVideoRenderLoop);
+        }
+        requestAnimationFrame(scrollVideoRenderLoop);
+
+        // ========================================
+        // SCROLL-LINKED MOVING ELEMENTS VIDEO (Frame Sequence + Canvas)
+        // ========================================
+        const MOVING_TOTAL_FRAMES = 240;
+        const movingVideoSection = document.getElementById('moving-video-section');
+        const movingVideoCanvas = document.getElementById('moving-video-canvas');
+        const movingVideoCtx = movingVideoCanvas ? movingVideoCanvas.getContext('2d') : null;
+        const movingVideoLoader = document.getElementById('moving-video-loader');
+        const movingVideoProgress = document.getElementById('moving-video-progress');
+        const movingVideoPercent = document.getElementById('moving-video-percent');
+        const movingFrames = [];
+        let movingFramesLoaded = 0;
+        let movingAllFramesReady = false;
+        let movingCurrentDisplayFrame = 0;
+        let movingTargetFrame = 0;
+
+        // Size the canvas to match the viewport
+        function sizeMovingCanvas() {
+            if (!movingVideoCanvas) return;
+            movingVideoCanvas.width = window.innerWidth;
+            movingVideoCanvas.height = window.innerHeight;
+            if (movingAllFramesReady && movingFrames[Math.round(movingCurrentDisplayFrame)]) {
+                drawMovingFrame(Math.round(movingCurrentDisplayFrame));
+            }
+        }
+        sizeMovingCanvas();
+        window.addEventListener('resize', sizeMovingCanvas);
+
+        // Draw a frame on the canvas (object-fit: cover)
+        function drawMovingFrame(index) {
+            const img = movingFrames[index];
+            if (!img || !movingVideoCtx) return;
+
+            const canvasW = movingVideoCanvas.width;
+            const canvasH = movingVideoCanvas.height;
+            const imgW = img.naturalWidth;
+            const imgH = img.naturalHeight;
+
+            const scale = Math.max(canvasW / imgW, canvasH / imgH);
+            const drawW = imgW * scale;
+            const drawH = imgH * scale;
+            const drawX = (canvasW - drawW) / 2;
+            const drawY = (canvasH - drawH) / 2;
+
+            movingVideoCtx.clearRect(0, 0, canvasW, canvasH);
+            movingVideoCtx.drawImage(img, drawX, drawY, drawW, drawH);
+        }
+
+        // Preload all moving-frames
+        function preloadMovingFrames() {
+            for (let i = 1; i <= MOVING_TOTAL_FRAMES; i++) {
+                const img = new Image();
+                img.src = `/moving-frames/frame_${String(i).padStart(4, '0')}.jpg`;
+                img.onload = () => {
+                    movingFramesLoaded++;
+                    const pct = Math.round((movingFramesLoaded / MOVING_TOTAL_FRAMES) * 100);
+                    if (movingVideoProgress) movingVideoProgress.style.width = pct + '%';
+                    if (movingVideoPercent) movingVideoPercent.textContent = pct + '%';
+
+                    if (movingFramesLoaded === MOVING_TOTAL_FRAMES) {
+                        movingAllFramesReady = true;
+                        if (movingVideoLoader) {
+                            movingVideoLoader.style.opacity = '0';
+                            setTimeout(() => { movingVideoLoader.style.display = 'none'; }, 500);
+                        }
+                        drawMovingFrame(0);
+                    }
+                };
+                movingFrames[i - 1] = img;
+            }
+        }
+        preloadMovingFrames();
+
+        // Smooth rendering loop using lerp
+        function movingVideoRenderLoop() {
+            if (movingAllFramesReady) {
+                movingCurrentDisplayFrame += (movingTargetFrame - movingCurrentDisplayFrame) * 0.15;
+                if (Math.abs(movingCurrentDisplayFrame - movingTargetFrame) < 0.1) {
+                    movingCurrentDisplayFrame = movingTargetFrame;
+                }
+                const frameIndex = Math.min(MOVING_TOTAL_FRAMES - 1, Math.max(0, Math.round(movingCurrentDisplayFrame)));
+                drawMovingFrame(frameIndex);
+            }
+            requestAnimationFrame(movingVideoRenderLoop);
+        }
+        requestAnimationFrame(movingVideoRenderLoop);
+
+        // ========================================
+        // MAIN SCROLL HANDLER
+        // ========================================
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            
+            requestAnimationFrame(() => {
+                // Vertical Parallax
+                parallaxElements.forEach(el => {
+                    const speed = el.getAttribute('data-scroll-speed');
+                    const yPos = -(scrolled * speed);
+                    el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                });
+
+                // Scroll-linked video: map scroll position to frame
+                if (scrollVideoSection && allFramesReady) {
+                    const sectionTop = scrollVideoSection.offsetTop;
+                    const sectionHeight = scrollVideoSection.offsetHeight;
+                    const windowHeight = window.innerHeight;
+                    const scrollRange = sectionHeight - windowHeight;
+
+                    if (scrolled >= sectionTop && scrolled <= sectionTop + scrollRange) {
+                        let progress = (scrolled - sectionTop) / scrollRange;
+                        progress = Math.max(0, Math.min(1, progress));
+                        targetFrame = progress * (TOTAL_FRAMES - 1);
+
+                        // Fade in text overlay in the last 15% of scroll
+                        const textOverlay = document.getElementById('scroll-video-text');
+                        if (textOverlay) {
+                            let textOpacity = 0;
+                            if (progress > 0.85) {
+                                textOpacity = (progress - 0.85) / 0.15;
+                            }
+                            textOverlay.style.opacity = Math.min(1, textOpacity);
+                        }
+                    } else if (scrolled < sectionTop) {
+                        targetFrame = 0;
+                    } else {
+                        targetFrame = TOTAL_FRAMES - 1;
+                    }
+                }
+
+                // ========================================
+                // SCROLL-LINKED MOVING ELEMENTS VIDEO
+                // ========================================
+                if (movingVideoSection && movingAllFramesReady) {
+                    const mvSectionTop = movingVideoSection.offsetTop;
+                    const mvSectionHeight = movingVideoSection.offsetHeight;
+                    const mvWindowHeight = window.innerHeight;
+                    const mvScrollRange = mvSectionHeight - mvWindowHeight;
+
+                    if (scrolled >= mvSectionTop && scrolled <= mvSectionTop + mvScrollRange) {
+                        let mvProgress = (scrolled - mvSectionTop) / mvScrollRange;
+                        mvProgress = Math.max(0, Math.min(1, mvProgress));
+                        movingTargetFrame = mvProgress * (MOVING_TOTAL_FRAMES - 1);
+
+                        // Fade in text overlay in the last 15% of scroll
+                        const movingTextOverlay = document.getElementById('moving-video-text');
+                        if (movingTextOverlay) {
+                            let movingTextOpacity = 0;
+                            if (mvProgress > 0.85) {
+                                movingTextOpacity = (mvProgress - 0.85) / 0.15;
+                            }
+                            movingTextOverlay.style.opacity = Math.min(1, movingTextOpacity);
+                        }
+                    } else if (scrolled < mvSectionTop) {
+                        movingTargetFrame = 0;
+                    } else {
+                        movingTargetFrame = MOVING_TOTAL_FRAMES - 1;
+                    }
+                }
+
+            });
+        });
+    });
+</script>
+</body>
 </html>
